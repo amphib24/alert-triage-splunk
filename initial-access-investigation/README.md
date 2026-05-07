@@ -67,7 +67,13 @@ vulnerabilities such as brute force attacks. This investigation is focused on re
  I am conducting further analysis on the raw event data to determine what the attacker accomplished post authentication.
 
 #### Analyst Observation: 
-   - The attacker gained initial access to the system via the john.smith account. There was multiple authentication sessions observed due to the attacker experiencing multiple disconnections. During the attacker's activity they were able to escalate privileges to root, indicating a successful privilege escalation attempt. Following root access, the attacker created a new user named system-utm. The account was added to multiple privileged groups, indicated by the modifications to /etc/group and /etc/gshadow, indicating the attacker established persistence mechanisms allowing for long-term system access. 
+   - The attacker gained initial access to the system via the john.smith account. There was multiple authentication sessions observed due to the attacker experiencing multiple disconnections. During the attacker's activity they were able to escalate privileges to root, indicating a successful privilege escalation attempt. Following root access, the attacker created a new user named system-utm. The account was added to multiple privileged groups, indicated by the modifications to /etc/group and /etc/gshadow, indicating the attacker established persistence mechanisms allowing for long-term system access.
+
+<img width="1858" height="458" alt="view raw data" src="https://github.com/user-attachments/assets/cf459262-a89b-4d0f-9899-c539a2f2f1cd" />
+
+<img width="1855" height="743" alt="raw_data_1" src="https://github.com/user-attachments/assets/6bf3e9e5-c77d-4262-a5c0-5e0026c80301" />
+
+<img width="1867" height="743" alt="RAW_DATA_2" src="https://github.com/user-attachments/assets/4bb45585-50df-4434-98ee-46ea5ffeecee" />
 
 ## Conlusion
 &nbsp;&nbsp;&nbsp; The investigation uncovered a high volume of failed authentication attempts isolated to one user (john.smith), accompanied by multiple successful attempts under the same username. This behavior is indicative of a successful brute force attack, which lead to the attacker gaining privileged access via the root account. The attacker then used this access to create a new user system-utm, which was then added to multiple privileged groups allowing the attacker to establish persistence for a long period of time if not remediated. Due to the severity of this event I will be escalating this alert up to the SOC 2 Level for further investigation and triage. 

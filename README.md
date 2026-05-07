@@ -9,3 +9,17 @@ malicious activity.
  An Analysis of authentication logs identifying brute force activity that leads to an attacker gaining initial access to the system, followed by privilege escalation and establishing persistence. 
  <a href="https://github.com/amphib24/alert-triage-splunk/tree/main/initial-access-investigation">Analysis</a>
 
+## Persistence Alert
+
+## Web Shell Alert
+
+# Skills Demonstrated
+   - Splunk SIEM analysis and query writing
+   - Authentication log investigation (Linux)
+   - Windows event log analysis
+   - Web server log investigation
+   - Alert triage and escalation decisions
+   - Attack pattern recognition
+   - Persistence and privilege escalation detection
+   - Web shell identification
+   - IOC extraction and correlation

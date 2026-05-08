@@ -10,7 +10,8 @@ malicious activity.
  <a href="https://github.com/amphib24/alert-triage-splunk/tree/main/initial-access-investigation">Analysis</a>
 
 ## Persistence Alert
-
+ Investigation of a Windows host to identify and analyze attacker-established persistence mechanisms through scheduled tasks, privilege escalation, and malicious command execution.
+ <a href = "https://github.com/amphib24/alert-triage-splunk/tree/main/persistence-alert-investigation">Analysis</a>
 ## Web Shell Alert
 
 # Skills Demonstrated

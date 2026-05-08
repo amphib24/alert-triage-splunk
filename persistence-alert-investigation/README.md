@@ -77,7 +77,7 @@
 
 <img width="1857" height="652" alt="cmd_investifation" src="https://github.com/user-attachments/assets/06df6c60-7651-4d5c-9ae1-097b14f6bd1c" />
 
-#### Source Host Identification
+## Source Host Identification
  The originating workstation was identified by pivoting from successful login attempts using Event ID 4624 and the compromised user account.
 
 #### Splunk Queries Used:

@@ -3,6 +3,17 @@
 alert triggered across various environments. These include Linux endpoints, Windows systems, and a web server. The purpose is to demonstrate SOC Tier 1 workflows including log analysis, alert validation, escalation decisions and identifying 
 malicious activity. 
 
+# Demonstrated Skills
+   - Splunk SIEM analysis and query writing
+   - Authentication log investigation (Linux)
+   - Windows event log analysis
+   - Web server log investigation
+   - Alert triage and escalation decisions
+   - Attack pattern recognition
+   - Persistence and privilege escalation detection
+   - Web shell identification
+   - IOC extraction and correlation
+
 # Investigations
 
 ## Linux Brute Force Investigation
@@ -19,13 +30,4 @@ malicious activity.
 
 ## Web Shell Alert
 
-# Skills Demonstrated
-   - Splunk SIEM analysis and query writing
-   - Authentication log investigation (Linux)
-   - Windows event log analysis
-   - Web server log investigation
-   - Alert triage and escalation decisions
-   - Attack pattern recognition
-   - Persistence and privilege escalation detection
-   - Web shell identification
-   - IOC extraction and correlation
+

@@ -1,5 +1,5 @@
 # Alert Triage Splunk Repository
-&nbsp;&nbsp;&nbsp;This repository is a collection of SOC Level alert triage investigations using Splunk. The investigations follow the labs from TryHackMe's SOC 1 Alert Triage With Splunk room. Each investigation represents separate security
+&nbsp;&nbsp;&nbsp;This repository is a collection of SOC level alert triage investigations using Splunk. The investigations follow the labs from TryHackMe's SOC 1 Alert Triage With Splunk room. Each investigation represents separate security
 alert triggered across various environments. These include Linux endpoints, Windows systems, and a web server. The purpose is to demonstrate SOC Tier 1 workflows including log analysis, alert validation, escalation decisions and identifying 
 malicious activity. 
 

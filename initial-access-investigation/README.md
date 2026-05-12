@@ -7,7 +7,7 @@ vulnerabilities such as brute force attacks. This investigation is focused on re
 
 ## Scenario 
  
-&nbsp;&nbsp;&nbsp; I am working as SOC Level 1 Analyst for an MSSP. I have been tasked with investigating a possible brute force attack on a Linux host utilizing Splunk to determine whether it should be considered suspicious and require escalation. The investigation is being conducted using logs sourced from:
+&nbsp;&nbsp;&nbsp; I am working as a SOC Level 1 Analyst for an MSSP. I have been tasked with investigating a possible brute force attack on a Linux host utilizing Splunk to determine whether it should be considered suspicious and require escalation. The investigation is being conducted using logs sourced from:
   - index=linux-alert
 
 ## Potential Indicators of Attack (IOAs)

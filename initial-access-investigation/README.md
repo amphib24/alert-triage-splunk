@@ -1,4 +1,4 @@
-## Alert Triage Splunk - Initial Access Investigation
+# Alert Triage Splunk - Initial Access Investigation
 
 ## Introduction
 
@@ -9,19 +9,19 @@ vulnerabilities such as brute force attacks. This investigation is focused on re
  
 &nbsp;&nbsp;&nbsp; I am working as a SOC Level 1 Analyst for an MSSP. I have been tasked with investigating a possible brute force attack on a Linux host utilizing Splunk to determine whether it should be considered suspicious and require escalation. The investigation is being conducted using logs sourced from:
   - index=linux-alert
-
-## Potential Indicators of Attack (IOAs)
-  - repeated failed SSH authentication attempts followed by multiple successful logins for the same user.
-
-## Analysis
-
-### Alert Details
+  
+  ### Alert Details
   
    -	Alert Name: Brute Force Activity Detection
    -	Time: 17/09/2025 9:00:21 AM
    -	Target Host: tryhackme-2404
    -	Source IP: 10.10.242.248
    -	No asset inventory table provided
+
+## Potential Indicators of Attack (IOAs)
+  - repeated failed SSH authentication attempts followed by multiple successful logins for the same user.
+
+## Analysis
 
 ### Initial Insights
    - I began by searching for the available options under source_type.

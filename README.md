@@ -19,13 +19,13 @@ malicious activity.
 ## Linux Brute Force Investigation
  An Analysis of authentication logs identifying brute force activity that leads to an attacker gaining initial access to the system, followed by privilege escalation and establishing persistence. 
 
- ## Technical Analysis
+ #### Technical Analysis
  <a href="https://github.com/amphib24/alert-triage-splunk/tree/main/initial-access-investigation">Analysis</a>
 
 ## Persistence Alert
  Investigation of a Windows host to identify and analyze attacker-established persistence mechanisms through scheduled tasks, privilege escalation, and malicious command execution.
 
-## Technical Analysis
+#### Technical Analysis
  <a href = "https://github.com/amphib24/alert-triage-splunk/tree/main/persistence-alert-investigation">Analysis</a>
 
 ## Web Shell Alert

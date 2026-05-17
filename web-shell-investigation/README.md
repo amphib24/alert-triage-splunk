@@ -5,7 +5,9 @@
 
 ## Scenario 
 &nbsp;&nbsp;&nbsp; I am working as a SOC Level 1 Analyst for an MSSP. I have been tasked with investigating a possible webs shell on a web server utilizing Splunk to determine whether it should be considered suspicious and require escalation. The investigation is being conducted using logs sourced from:
-   -index="web-alert"
+  
+   - index="web-alert"
+
 ### Alert Details
 -	Alert Name: Potential Web Shell Upload Detected
 -	Time: 14/09/2025 09:31:51 AM

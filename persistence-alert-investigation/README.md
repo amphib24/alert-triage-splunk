@@ -9,12 +9,6 @@
 &nbsp;&nbsp;&nbsp; I am working as a SOC Level 1 Analyst for an MSSP. I have been tasked with investigating a suspicious scheduled task that was created on a Microsoft host, utilizing Splunk to determine whether it should be considered suspicious and require escalation. The investigation is being conducted using logs sourced from:
   - index=win-alert
 
-
-## Potential Indicators of Attack (IOAs)
-  - suspicious scheduled task created on a host
-
-## Analysis
-
 ### Alert Details
   
    -	Alert Name: Potential Task Scheduler Persistence Identified
@@ -23,6 +17,11 @@
    -	User: oliver.thompson
    -	Task Name: AssessmentTaskOne
    -  No asset inventory table provided
+
+## Potential Indicators of Attack (IOAs)
+  - suspicious scheduled task created on a host
+
+## Analysis
 
 ## Initial Query 
 

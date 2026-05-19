@@ -85,7 +85,7 @@
    - Index=”win-alert” EventCode=4624 Account_Name=”oliver.thompson” Workstation_Name=”DEV-QA-SERVER”
 
 #### Analyst Observation:
-   - Further Investigation revealed the originating workstation associated with the suspicious activity. The attacker logged into the user account `oliver.thompson` on host `WIN-H01`5 from workstation `DEV-QA-SERVER`, indicating that this system is the likely source of the initial point of compromise. 
+   - Further Investigation revealed the originating workstation associated with the suspicious activity. The attacker logged into the user account `oliver.thompson` on host `WIN-H015` from workstation `DEV-QA-SERVER`, indicating that this system is the likely source of the initial point of compromise. 
 
 <img width="1526" height="708" alt="source host id" src="https://github.com/user-attachments/assets/87e2c1f0-017d-4500-9043-9be50592a438" />
 

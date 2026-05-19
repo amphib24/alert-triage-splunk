@@ -12,9 +12,9 @@
 ### Alert Details
   
    -	Alert Name: Potential Task Scheduler Persistence Identified
-   -	Time: 30/08/2025 10:06:07
-   -	Target Host: WIN-H015
-   -	User: oliver.thompson
+   -	Time: `30/08/2025 10:06:07`
+   -	Target Host: `WIN-H015`
+   -	User: `oliver.thompson`
    -	Task Name: AssessmentTaskOne
    -  No asset inventory table provided
 
@@ -40,14 +40,14 @@
    - -	index=”win-alert” EventCode=4698
 
 #### Analyst Observation: 
-   - A single event was returned by the query with the user account oliver.thompson on the host WIN-H015, indicating the scheduled host was created on the system. Further analysis is required to determine the purpose and execution behavior of       the task
+   - A single event was returned by the query with the user account `oliver.thompson` on the `host WIN-H015`, indicating the scheduled host was created on the system. Further analysis is required to determine the purpose and execution behavior of the task
 
 <img width="1862" height="769" alt="second filter by event code" src="https://github.com/user-attachments/assets/3699f01c-a48d-434a-93bd-6c67348afb34" />
 
 ## Event Analysis
 
 #### Analyst Observation:
-   - Further investigation reveals the task was configured to execute daily starting on 2025-08-30 at 10:15:00. The task launches PowerShell and executed a command utilizing certutil.exe to download the file rv.exe from ‘http://tryhotme:9876/       rv[.]exe’ to the local path C:\Users\OLIVER~1.THO\AppData\Local Temp\3\DataCollector.exe. Following the download, the task executes the payload. This is highly suspicious behavior which is consistent with a persistence mechanism used to        repeatably download and execute malicious tooling. The Parent Process ID (PPID) was also found which is 4218, which will be used to further investigate the incident.
+   - Further investigation reveals the task was configured to execute daily starting on 2025-08-30 at 10:15:00. The task launches PowerShell and executed a command utilizing certutil.exe to download the file `rv.exe` from `http://tryhotme:9876/rv[.]exe` to the local path `C:\Users\OLIVER~1.THO\AppData\Local Temp\3\DataCollector.exe`. Following the download, the task executes the payload. This is highly suspicious behavior which is consistent with a persistence mechanism used to        repeatably download and execute malicious tooling. The Parent Process ID (PPID) was also found which is 4218, which will be used to further investigate the incident.
 
 <img width="1051" height="836" alt="start_time and frequency" src="https://github.com/user-attachments/assets/2bcb554c-5f21-4f24-b0db-dab114f95999" />
 
@@ -85,11 +85,11 @@
    - Index=”win-alert” EventCode=4624 Account_Name=”oliver.thompson” Workstation_Name=”DEV-QA-SERVER”
 
 #### Analyst Observation:
-   - Further Investigation revealed the originating workstation associated with the suspicious activity. The attacker logged into the user account oliver.thompson on host WIN-H015 from workstation DEV-QA-SERVER, indicating that this system is      the likely source of the initial point of compromise. 
+   - Further Investigation revealed the originating workstation associated with the suspicious activity. The attacker logged into the user account `oliver.thompson` on host `WIN-H01`5 from workstation `DEV-QA-SERVER`, indicating that this system is the likely source of the initial point of compromise. 
 
 <img width="1526" height="708" alt="source host id" src="https://github.com/user-attachments/assets/87e2c1f0-017d-4500-9043-9be50592a438" />
 
 ## Conclusion
 
-&nbsp;&nbsp;&nbsp; The investigation identified a successful compromise of the account oliver.thompson, which originated from the workstation DEV-QA-SERVER and targeted the host WIN-H015. Initial access was achieved via valid authentication, followed by the creation of a scheduled task ( Event ID 4968) used to establish persistence. Further analysis, revealed the use of cmd.exe to execute malicious commands. Privilege escalation was confirmed via the use of net localgroup Administrators, which added the compromised host to the local Administrators group, granting elevated privileges on the system. In addition, a malicious payload (DataCollector.exe) was downloaded via certutil.exe. Due to the severity of the activity and confirmed persistence on the host, this incident is verified to be a true positive and requires immediate escalation to SOC Tier 2 for containment, further remediation, and remediation.
+&nbsp;&nbsp;&nbsp; The investigation identified a successful compromise of the account oliver.thompson, which originated from the workstation `DEV-QA-SERVER` and targeted the host `WIN-H015`. Initial access was achieved via valid authentication, followed by the creation of a scheduled task `Event ID 4968` used to establish persistence. Further analysis, revealed the use of `cmd.exe` to execute malicious commands. Privilege escalation was confirmed via the use of `net localgroup Administrators`, which added the compromised host to the local Administrators group, granting elevated privileges on the system. In addition, a malicious payload `DataCollector.exe` was downloaded via `certutil.exe`. Due to the severity of the activity and confirmed persistence on the host, this incident is verified to be a true positive and requires immediate escalation to SOC Tier 2 for containment, further remediation, and remediation.
 
